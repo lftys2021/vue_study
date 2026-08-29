@@ -1,0 +1,4 @@
+<UserCard
+  :name="user.name"
+  :age="user.age"
+/>
