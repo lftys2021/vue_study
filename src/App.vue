@@ -3,10 +3,11 @@
 // import Second from './components/Second.vue';
 // import Third from './components/Third.vue';
 // import Fourth from './components/Fourth.vue';
-import Fifth from './components/Fifth.vue';
+// import Fifth from './components/Fifth.vue';
+import Sixth from './components/Sixth.vue';
 
 </script>
 
 <template>
-  <Fifth />
+  <Sixth />
 </template>
