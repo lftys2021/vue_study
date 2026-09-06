@@ -4,10 +4,11 @@
 // import Third from './components/Third.vue';
 // import Fourth from './components/Fourth.vue';
 // import Fifth from './components/Fifth.vue';
-import Sixth from './components/Sixth.vue';
+// import Sixth from './components/Sixth.vue';
+import Seventh from './components/Seventh.vue';
 
 </script>
 
 <template>
-  <Sixth />
+  <Seventh />
 </template>

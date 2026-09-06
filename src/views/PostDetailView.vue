@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 
@@ -66,4 +66,56 @@ const post = computed(() => {
   <RouterLink to="/posts">
     목록으로
   </RouterLink>
+</template> -->
+
+<script setup lang="ts">
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+
+import { usePostStore } from "../stores/post";
+
+const route = useRoute();
+
+const postStore = usePostStore();
+
+const postId = computed(() => {
+  return Number(route.params.id);
+});
+
+const post = computed(() => {
+  return postStore.getPostById(
+    postId.value
+  );
+});
+</script>
+
+<template>
+  <div v-if="post">
+    <h1>{{ post.title }}</h1>
+
+    <p>
+      작성자:
+      {{ post.author }}
+    </p>
+
+    <hr />
+
+    <p>
+      {{ post.content }}
+    </p>
+
+    <RouterLink to="/posts">
+      목록으로
+    </RouterLink>
+  </div>
+
+  <div v-else>
+    <h1>
+      게시글을 찾을 수 없습니다.
+    </h1>
+
+    <RouterLink to="/posts">
+      목록으로
+    </RouterLink>
+  </div>
 </template>
