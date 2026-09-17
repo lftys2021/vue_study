@@ -232,3 +232,33 @@ src
 │
 ├── App.vue
 └── main.ts
+
+# 8주차 — FastAPI와 Vue 연결
+Day 36 ~ Day 40
+Day	   | 주제	          | 핵심
+-----------------------------------------------------
+Day 36 | FastAPI API 확인 | GET API와 Vue fetch() 연결
+Day 37 | POST 요청        |	Vue에서 FastAPI로 데이터 보내기
+Day 38 | PUT / DELETE    |	수정·삭제 연결
+Day 39 | Axios + Pinia	 | API 통신을 Store로 정리
+Day 40 | 종합 실습	       | Vue + Pinia + Router + FastAPI 게시판
+-----------------------------------------------------
+
+# Vue, fastAPI 관련 명령어 모음
+# venv 설치
+python -m venv .venv
+
+# venv 실행
+.\.venv\Scripts\Activate.ps1
+
+# uvicorn 설치
+pip install fastapi uvicorn
+
+# pip 리스트 확인
+pip list
+
+# fastapi 실행
+uvicorn main:app --reload
+
+# vue 실행
+npm run dev
